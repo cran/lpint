@@ -26,8 +26,7 @@ LazyLoad: \tab yes\cr
 % ~~ functions ~~
 }
 \author{
-Feng Chen <feng.chen@unsw.edu.au.>
-
+Feng Chen <feng.chen@unsw.edu.au>
 Maintainer: Feng Chen <feng.chen@unsw.edu.au>
 % ~~ The author and/or maintainer of the package ~~
 }
@@ -58,10 +57,10 @@ Maintainer: Feng Chen <feng.chen@unsw.edu.au>
 % ~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~
 % ~~ the R documentation directory ~~
 \keyword{ package }
-\seealso{
-% ~~ Optional links to other man pages, e.g. ~~
-% ~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
-\examples{
-% ~~ simple examples of the most important functions ~~
-}
+% \seealso{
+% % ~~ Optional links to other man pages, e.g. ~~
+% % ~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+% }
+% \examples{
+% % ~~ simple examples of the most important functions ~~
+% }

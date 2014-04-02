@@ -24,18 +24,20 @@ function(jmptimes,jmpsizes=rep(1,length(jmptimes)),
     d <- diag(bw^(0:p) / gamma(0:p + 1))
     score <- function(theta){
       denom <- t(G.mat)%*%theta
-      G.mat[,valid] %*% (W.vec/denom)[valid] -
+      G.mat[,valid,drop=FALSE] %*% (W.vec/denom)[valid] -
         d %*% mu.vec[0:p +1]
     }
     mHessian <- function(theta){
       denom <- t(G.mat)%*%theta
-      G.mat[,valid] %*% diag(as.numeric((W.vec/denom^2))[valid]) %*%
-        t(G.mat[,valid])
+      G.mat[,valid,drop=FALSE] %*% diag(as.numeric((W.vec/denom^2))[valid]) %*%
+        t(G.mat[,valid,drop=FALSE])
     }
     it <- 0;
     init <- Ntau/sum(c(Y,Y[Ntau])*diff(c(0,jmptimes,Tau)))*
       us^(1/gd * -gd:gd) ##us=upper search limit
-    init.v <- apply(apply(cbind(init,0),1,score),1,function(x)sum(abs(x)))
+    init.v <- apply(apply(cbind(init,matrix(0,nrow=gd*2+1,ncol=p)),1,score),
+                    1,function(x)sum(abs(x)))
+
     theta1 <- c(init[which.min(init.v)],rep(0,p))
     theta0 <- rep(Inf,p+1)
     while(sqrt(sum((theta1-theta0)^2))>tol && it<maxit){

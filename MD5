@@ -1,7 +1,7 @@
-5f0ecf126fb9a92f54f09f7597209daf *DESCRIPTION
+7819a5033a8d7d5c8babbf9669103b1f *DESCRIPTION
 8b54e5a89fbda3af5e077053d40bec76 *NAMESPACE
 f415802d385e64001d168e3ce7d36546 *R/lpint.R
-bf4a5f49b46d6067ceff178814cb8c69 *R/lplikint.R
-b6e758dbd644de93d84e313a6a6b3014 *man/lpint-package.Rd
-3626656331f20307fef98293b21ea938 *man/lpint.Rd
-56a2ba84c468554699f89990ef931205 *man/lplikint.Rd
+12b68833e3d86bfafdede4d718fc3642 *R/lplikint.R
+92885634dfef2edad3c2df81bd5a3f5f *man/lpint-package.Rd
+7b793350228201ff2ee82c8535f60f68 *man/lpint.Rd
+7d43013a280166dc0a4c84bd9b3ce639 *man/lplikint.Rd

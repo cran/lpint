@@ -2,17 +2,22 @@
 \alias{lplikint}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-  Maximum partial likelihood local polynomial estimator of counting
+ Partial likelihood based local polynomial estimators of the counting
   process intensity function and its derivatives 
 %%  ~~function to do ... ~~
 }
 \description{
-  The local polynomial estimator is based on the (localized) partial
+  This local polynomial estimator is based on the (localized) partial
   likelihood 
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-lplikint(jmptimes, jmpsizes = rep(1, length(jmptimes)), Y = rep(1, length(jmptimes)), K = function(x) 3/4 * (1 - x^2) * (x <= 1 & x >= -1), bw, adjust = 1, nu = 0, p = 1, Tau = 1, n = 101, tseq = seq(from = 0, to = Tau, length = n), tol = 1e-05, maxit = 100, us = 10, gd = 5)
+lplikint(jmptimes, jmpsizes = rep(1, length(jmptimes)),
+         Y = rep(1,length(jmptimes)),
+         K = function(x) 3/4 * (1 - x^2) * (x <= 1 & x >= -1),
+         bw, adjust = 1, nu = 0, p = 1, Tau = 1, n = 101,
+         tseq = seq(from = 0, to = Tau, length = n), tol = 1e-05,
+         maxit = 100, us = 10, gd = 5) 
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -116,9 +121,9 @@ lplikint(jmptimes, jmpsizes = rep(1, length(jmptimes)), Y = rep(1, length(jmptim
   Feng Chen <feng.chen@unsw.edu.au.>
 %%  ~~who you are~~
 }
-\note{
-%%  ~~further notes~~
-}
+% \note{
+% %%  ~~further notes~~
+% }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 

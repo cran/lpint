@@ -12,10 +12,11 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-lpint(jmptimes, jmpsizes = rep(1, length(jmptimes)), Y = rep(1,
-length(jmptimes)), bw = NULL, adjust = 1, Tau = max(1, jmptimes), p = nu
-+ 1, nu = 0, K = function(x) 3/4 * (1 - x^2) * (x <= 1 & x >= -1), n =
-101, bw.only=FALSE)
+lpint(jmptimes, jmpsizes = rep(1, length(jmptimes)),
+      Y = rep(1,length(jmptimes)), bw = NULL,
+      adjust = 1, Tau = max(1, jmptimes), p = nu + 1,
+      nu = 0, K = function(x) 3/4 * (1 - x^2) * (x <= 1 & x >= -1),
+      n = 101, bw.only=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -64,9 +65,9 @@ length(jmptimes)), bw = NULL, adjust = 1, Tau = max(1, jmptimes), p = nu
   \item{bw.only}{TRUE or FALSE according as if the rule of thumb
     bandwidth is the only required output or not}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
+% \details{
+% %%  ~~ If necessary, more details than the description above ~~
+% }
 \value{
   either a list containing
   \item{x}{the vector of times at which the estimator is evaluated}
@@ -91,9 +92,9 @@ length(jmptimes)), bw = NULL, adjust = 1, Tau = max(1, jmptimes), p = nu
   Feng Chen <feng.chen@unsw.edu.au.>
 %%  ~~who you are~~
 }
-\note{
-%%  ~~further notes~~
-}
+% \note{
+% %%  ~~further notes~~
+% }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
@@ -115,6 +116,27 @@ intest <- lpint(jtms,Tau=censor)
 ##plot and compare
 plot(intest,xlab="time",ylab="intensity",type="l",lty=1)
 curve(int,add=TRUE,lty=2)
+
+## Example estimating the hazard function from right censored data:
+## First simulate the (not directly observable) life times and censoring
+## times:
+lt <- rweibull(500,2.5,3); ct <- rlnorm(500,1,0.5)
+## Now the censored times and censorship indicators delta (the
+## observables): 
+ot <- pmin(lt,ct); dlt <- as.numeric(lt <= ct);
+## Estimate the hazard rate based on the censored observations:
+jtms <- sort(ot[dlt==1]);
+Y <- sapply(jtms,function(x)sum(ot>=x));
+haz.est <- lpint(jtms,Y=Y);
+## plot the estimated hazard function:
+matplot(haz.est$x,
+        pmax(haz.est$y+outer(haz.est$se,c(-1,0,1)*qnorm(0.975)),0),
+        type="l",lty=c(2,1,2),
+        xlab="t",ylab="h(t)",
+        col=1);
+## add the truth:
+haz <- function(x)dweibull(x,2.5,3)/pweibull(x,2.5,3,lower.tail=FALSE)
+curve(haz, add=TRUE,col=2)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
