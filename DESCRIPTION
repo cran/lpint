@@ -1,15 +1,15 @@
 Package: lpint
 Type: Package
-Title: Local polynomial estimators of intensity function or its
-        derivatives
-Version: 2.0
-Date: 2014-04-02
+Title: Local Polynomial Estimators of the Intensity Function and Its
+        Derivatives
+Version: 2.1
+Date: 2022-04-12
 Author: Feng Chen <feng.chen@unsw.edu.au>
 Maintainer: Feng Chen <feng.chen@unsw.edu.au>
-Description: Estimates the intensity function, or its derivative of a given order, of a multiplicative counting process using the local polynomial method
+Description: Functions to estimate the intensity function and its derivative of a given order of a multiplicative counting process using the local polynomial method.
 License: GPL (>= 2.0)
 LazyLoad: yes
-Packaged: 2014-04-02 10:44:50 UTC; z3243864
 NeedsCompilation: no
+Packaged: 2022-04-12 03:32:24 UTC; z3243864
 Repository: CRAN
-Date/Publication: 2014-04-02 13:24:31
+Date/Publication: 2022-04-12 03:52:27 UTC

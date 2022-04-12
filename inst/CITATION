@@ -1,0 +1,42 @@
+citHeader("To cite the IHSEP package, please use:")
+citEntry(
+ entry="Article",
+ title="Maximum Local Partial Likelihood Estimators for the Counting Process Intensity Function and Its Derivatives", 
+ journal="Statistica Sinica",
+ volume= "21",
+ number="1",
+ pages="107-128",
+ year="2011",
+ author="Feng Chen",
+ textVersion="Chen, F. (2011) Maximum Local Partial Likelihood Estimators for the Counting Process Intensity Function and Its Derivatives. Statistica Sinica 21(1):107-128.")
+citEntry(
+ entry="Article",
+ title="Nonparametric estimation of multiplicative counting process intensity functions with an application to the Beijing SARS epidemic", 
+ journal="Communications in Statistics - Theory and Methods",
+ volume= "37",
+ number="2",
+ pages="294-306",
+ year="2008",
+ author="Feng Chen and Richard M. Huggins and Paul S. F. Yip and K. F. Lam",
+ textVersion="Chen, F., Huggins, R.M., Yip, P.S.F. and Lam, K.F. (2008) Nonparametric estimation of multiplicative counting process intensity functions with an application to the Beijing SARS epidemic. Communications in Statistics - Theory and Methods 37(2):294-306")
+citEntry(
+ entry="Article",
+ title="On the Local Polynomial Estimators of the Counting Process Intensity Function and its Derivatives", 
+ journal="Scandinavian Journal of Statistics",
+ volume= "38",
+ number="4",
+ pages="631-649",
+ year="2011",
+ author="Feng Chen and Paul S. F. Yip and K. F. Lam",
+ textVersion="Chen, F., Yip, P.S.F. and Lam, K.F. (2011) Inference for a non-stationary
+ self-exciting point process with an application in ultra-high
+ frequency financial data modeling. Scandinavian Journal of Statistics
+ 38(4):631-649.")
+citEntry(
+ entry="Manual",
+ title="lpint: Local Polynomial Estimators of Intensity Function or Its Derivatives", 
+ year="2022",
+ author="Feng Chen",
+ url="https://cran.r-project.org/package=lpint",
+ note="R package version 2.1",
+ textVersion="Chen, F. (2022) lpint: Local Polynomial Estimators of Intensity Function or Its Derivatives. R package 2.1. https://CRAN.R-project.org/package=lpint")

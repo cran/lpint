@@ -3,14 +3,14 @@
 % \alias{lpint}
 \docType{package}
 \title{
-Local polynomail estimators of the intensity function of a counting
-process and its derivatives
+Local Polynomail Estimators of the Intensity Function of a Counting
+Process and Its Derivatives
 % ~~ package title ~~
 }
 \description{
 Estimates the intensity function or its derivative of a give a given
 order using the local polynomial method with automatic bandwidth
-selection using a crude rule of thumb plug-in approach.
+selection using a rule of thumb plug-in approach.
 % ~~ A concise (1-5 lines) description of the package ~~
 }
 \details{
